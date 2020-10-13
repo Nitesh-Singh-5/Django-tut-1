@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration</title>
+</head>
+<style>
+
+body{
+    background-color: black;
+    color: white;
+}
+.nitesh{
+    color: black;
+}
+.btn{
+    cursor: pointer;
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 5px;
+    background-color: aqua;
+}
+.errorlist{
+    list-style-type: none;
+    color: aqua;
+    font-size: 16px;
+    
+    padding: 0;
+    
+}
+.required{
+    color: red;
+}
+
+</style>
+
+<body>
+    <form action="" method="POST" novalidate>
+     {% csrf_token %}
+     <!-- {{for.non_field_errors}}
+     {% for field in form %}
+     <div>
+        {{form.label_tag}} {{field}} {{field.errors|striptags}}
+     </div>
+     {% endfor %} -->
+     
+     {{form.as_p}}
+     <input type="Submit" class="btn" value="Submit">
+    </form>
+</body>
+</html>

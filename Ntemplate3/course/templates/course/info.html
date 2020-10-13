@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <h1> Start Learning {{cname}}  </h1>
+    <img src="{% static 'images/nitesh1.jpg' %}" alt="love">
+    <img src="{% static 'images/nitesh1.jpg' %}" alt="Nitesh"><hr>
+
+    <form action="">
+        <input type="button" value="Click Me" onclick="disp()">
+    </form>
+    <script src="{% static 'js/all.js' %}"></script>
+</body>
+</html>

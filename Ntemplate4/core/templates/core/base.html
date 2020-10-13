@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} {% endblock title %}</title>
+    
+    {% block link %}
+    <link rel="stylesheet" href="{% static 'core/css/core.css' %}">
+    {% endblock link %}
+    
+</head>
+<body>
+    <ul>
+        <a href= "{% url 'home' %}"><li>HOME</li></a>
+        <a href= "{% url 'about' %}"><li>ABOUT</li></a>
+        <a href= "{% url 'about' %}"><li>ABOUT</li></a>
+        <a href= "{% url 'about' %}"><li>ABOUT</li></a>
+        <a href= "{% url 'about' %}"><li>ABOUT</li></a>
+        <a href= "{% url 'course' %}"><li>SERVICE</li></a>
+    </ul>
+
+    {% block content %} 
+    <h2> Start Learning {{cname}} </h2>
+    {% endblock content %}
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, corporis!</p>
+</body>
+
+</html>
